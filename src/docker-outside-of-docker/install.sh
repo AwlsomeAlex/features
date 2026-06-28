@@ -267,7 +267,7 @@ fi
 
 case "${ADJUSTED_ID}" in
     debian)
-        if [[ ! " ${SUPPORTED_CODENAMES} " != *"${VERSION_CODENAME}"* ]]; then
+        if [[ " ${SUPPORTED_CODENAMES} " != *"${VERSION_CODENAME}"* ]]; then
             err "Unsupported distribution version '${VERSION_CODENAME}'. To resolve, ${UNSUPPORTED_HINT}."
             err "Supported distributions include: ${SUPPORTED_CODENAMES}"
             exit 1
